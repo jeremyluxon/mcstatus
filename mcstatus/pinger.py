@@ -101,7 +101,7 @@ class PingResponse:
 
             if "sample" in raw:
                 if type(raw["sample"]) is not list:
-                    raise ValueError("Invalid players object (expected 'sample' to be list, was %s)" % type(raw["max"]))
+                    raise ValueError("Invalid players object (expected 'sample' to be list, was %s)" % type(raw["sample"]))
                 self.sample = [PingResponse.Players.Player(p) for p in raw["sample"]]
             else:
                 self.sample = None
